@@ -35,7 +35,7 @@ func PayloadsDir() (string, error) {
 
 		// The remainder only applies on non-windows where we still carry payloads in the main executable
 		cleanupTmpDirs()
-		tmpDir := envconfig.TmpDir()
+		tmpDir := envconfig.TempDir()
 		if tmpDir == "" {
 			tmpDir, err = os.MkdirTemp("", "ollama")
 			if err != nil {
